@@ -32,9 +32,13 @@ struct ContentView: View {
             }
         }
         .task {
-            if let url = Bundle.main.url(forResource: "test", withExtension: "xml") {
+            // if let url = Bundle.main.url(forResource: "test", withExtension: "xml") {
+            if let url = URL(string: "https://api.met.no/weatherapi/sunrise/2.0?lat=58.6173&lon=5.644916&date=2022-12-04&offset=+01:00&days=10") {
                 do {
-                    let data = try Data(contentsOf: url)
+                    // let data = try Data(contentsOf: url)
+                    let urlSession = URLSession.shared
+                    let (data, _) = try await urlSession.data(from: url)
+                    
                     let parser = SunParser(data: data)
                     if parser.parse() {
                         sunRises  = parser.sunRises
