@@ -8,16 +8,6 @@
 import Foundation
 import SwiftUI
 
-struct SunRise: Identifiable {
-    let id = UUID()
-    var time: String
-}
-
-struct SunSet: Identifiable {
-    let id = UUID()
-    var time: String
-}
-
 struct ContentView: View {
     @State var sunRises: [SunRise] = []
     @State var sunSets: [SunSet] = []
@@ -32,24 +22,66 @@ struct ContentView: View {
             }
         }
         .task {
-            // if let url = Bundle.main.url(forResource: "test", withExtension: "xml") {
-            if let url = URL(string: "https://api.met.no/weatherapi/sunrise/2.0?lat=58.6173&lon=5.644916&date=2022-12-04&offset=+01:00&days=10") {
-                do {
-                    // let data = try Data(contentsOf: url)
-                    let urlSession = URLSession.shared
-                    let (data, _) = try await urlSession.data(from: url)
-                    
-                    let parser = SunParser(data: data)
-                    if parser.parse() {
-                        sunRises  = parser.sunRises
-                        sunSets  = parser.sunSets
-                    } else {
-                        print("\n---> parser error: \(parser.parserError as Optional)")
-                    }
-                } catch {
-                    print("\n---> data error: \(error)")
-                }
+            let value : (String, [SunRise], [SunSet]) =
+            await findSunInfo(url: "https://api.met.no/weatherapi/sunrise/2.0?",
+                              latitude: 58.6173,
+                              longitude: 5.6449,
+                              offset: "+01:00",
+                              days: 10)
+            if value.0.isEmpty {
+                sunRises = value.1
+                sunSets = value.2
+                
+                print(sunSets[5].time)
+                
+            } else {
+                sunRises.removeFirst()
+                sunSets.removeAll()
             }
         }
     }
+}
+
+func findSunInfo(url: String,
+                 latitude: Double,
+                 longitude: Double,
+                 offset: String,
+                 days: Int) async -> (String, [SunRise], [SunSet]) {
+
+    var sunRises: [SunRise] = []
+    var sunSets: [SunSet] = []
+    var errors : String = ""
+   
+    let date = FormatDateToString(date: Date(), format: "yyyy-MM-dd")
+    let lat = "\(latitude)"
+    let lon = "\(longitude)"
+    let urlString = url + "lat=" + lat + "&lon=" + lon + "&date=" + date + "&offset=" + offset + "&days=" + String(days)
+    let url = URL(string: urlString)
+    print(url! as Any)
+
+    sunRises.removeAll()
+    sunSets.removeAll()
+ 
+    // if let url = Bundle.main.url(forResource: "test", withExtension: "xml") {
+    
+    if let url {
+        do {
+            // let data = try Data(contentsOf: url)
+            let urlSession = URLSession.shared
+            let (data, _) = try await urlSession.data(from: url)
+            
+            let parser = SunParser(data: data)
+            if parser.parse() {
+                sunRises  = parser.sunRises
+                sunSets  = parser.sunSets
+            } else {
+                errors = "\(String(describing: parser.parserError))"
+            }
+        } catch {
+            errors = "\(error)"
+        }
+    }
+    
+    return (errors, sunRises, sunSets)
+    
 }
