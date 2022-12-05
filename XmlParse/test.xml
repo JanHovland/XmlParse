@@ -1,0 +1,22 @@
+<astrodata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.api.met.no/schemas/astrodata-2.0.xsd">
+    <meta licenseurl="https://api.met.no/license_data.html"/>
+    <location latitude="58.6" longitude="5.6" height="0">
+        <time date="2022-12-04">
+            <moonphase time="2022-12-04T00:00:00+01:00" value="36.554229265" desc="LOCAL MOON STATE * MOON PHASE= 36.6 (waxing gibbous)"/>
+            <moonshadow time="2022-12-04T00:00:00+01:00" elevation="40.949526225" azimuth="137.018194657" desc="LOCAL MOON STATE * SHADOW ANGLES (azi=137.0,ele=40.9)"/>
+            <moonposition time="2022-12-04T00:00:00+01:00" elevation="29.050275606" azimuth="228.880794939" range="383794.553586498" phase="36.554229265" desc="LOCAL MOON POSITION Elv: 29.050 deg, Azi: 228.881, Rng: 383794.6 km"/>
+            <solarmidnight time="2022-12-04T00:27:40+01:00" elevation="-53.599248228" desc="LOCAL DIURNAL MINIMUM SOLAR ELEVATION (Min= -53.59925)"/>
+            <moonset time="2022-12-04T04:17:53+01:00" desc="LOCAL DIURNAL MOON SET"/>
+            <sunrise time="2022-12-04T09:06:54+01:00" desc="LOCAL DIURNAL SUN RISE"/>
+            <low_moon time="2022-12-04T09:25:26+01:00" elevation="-22.396748632" desc="LOCAL DIURNAL MINIMUM MOON ELEVATION (Min= -22.39675)"/>
+            <solarnoon time="2022-12-04T12:27:35+01:00" elevation="9.132566983" desc="LOCAL DIURNAL MAXIMUM SOLAR ELEVATION (Max= 9.13257)"/>
+            <moonrise time="2022-12-04T14:29:30+01:00" desc="LOCAL DIURNAL MOON RISE"/>
+            <sunset time="2022-12-04T15:48:15+01:00" desc="LOCAL DIURNAL SUN SET"/>
+            <high_moon time="2022-12-04T21:59:49+01:00" elevation="43.444783053" desc="LOCAL DIURNAL MAXIMUM MOON ELEVATION (Max= 43.44478)"/>
+        </time>
+        <time date="2022-12-05">
+            <moonposition time="2022-12-05T00:00:00+01:00" elevation="38.2405168" azimuth="219.343552579" range="386501.385231052" phase="39.827409769" desc="LOCAL MOON POSITION Elv: 38.241 deg, Azi: 219.344, Rng: 386501.4 km"/>
+        </time>
+    </location>
+</astrodata>
+ 

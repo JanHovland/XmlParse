@@ -11,6 +11,8 @@
 		DBA85076293DE3D4001A3B6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA85075293DE3D4001A3B6D /* ContentView.swift */; };
 		DBA85078293DE3D6001A3B6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA85077293DE3D6001A3B6D /* Assets.xcassets */; };
 		DBA8507C293DE3D6001A3B6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA8507B293DE3D6001A3B6D /* Preview Assets.xcassets */; };
+		DBA85083293DE438001A3B6D /* test.xml in Resources */ = {isa = PBXBuildFile; fileRef = DBA85082293DE438001A3B6D /* test.xml */; };
+		DBA85085293DE682001A3B6D /* SunParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA85084293DE682001A3B6D /* SunParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		DBA85077293DE3D6001A3B6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBA85079293DE3D6001A3B6D /* XmlParse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XmlParse.entitlements; sourceTree = "<group>"; };
 		DBA8507B293DE3D6001A3B6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DBA85082293DE438001A3B6D /* test.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test.xml; sourceTree = "<group>"; };
+		DBA85084293DE682001A3B6D /* SunParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				DBA85077293DE3D6001A3B6D /* Assets.xcassets */,
 				DBA85079293DE3D6001A3B6D /* XmlParse.entitlements */,
 				DBA8507A293DE3D6001A3B6D /* Preview Content */,
+				DBA85082293DE438001A3B6D /* test.xml */,
+				DBA85084293DE682001A3B6D /* SunParser.swift */,
 			);
 			path = XmlParse;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA85083293DE438001A3B6D /* test.xml in Resources */,
 				DBA8507C293DE3D6001A3B6D /* Preview Assets.xcassets in Resources */,
 				DBA85078293DE3D6001A3B6D /* Assets.xcassets in Resources */,
 			);
@@ -139,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA85085293DE682001A3B6D /* SunParser.swift in Sources */,
 				DBA85076293DE3D4001A3B6D /* ContentView.swift in Sources */,
 				DBA85074293DE3D4001A3B6D /* XmlParseApp.swift in Sources */,
 			);
