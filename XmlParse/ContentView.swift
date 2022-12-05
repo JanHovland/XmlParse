@@ -59,14 +59,23 @@ func findSunInfo(url: String,
     let url = URL(string: urlString)
     print(url! as Any)
 
+    /// Blanker sunRises:
+    ///
     sunRises.removeAll()
+    /// Blanker sunSets:
+    ///
     sunSets.removeAll()
- 
+     
+    /// Henter data fra filen test,xml:
+    ///
     // if let url = Bundle.main.url(forResource: "test", withExtension: "xml") {
     
     if let url {
         do {
+            /// Henter data fra filen test,xml:
+            ///
             // let data = try Data(contentsOf: url)
+            
             let urlSession = URLSession.shared
             let (data, _) = try await urlSession.data(from: url)
             
