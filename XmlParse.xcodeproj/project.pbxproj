@@ -13,6 +13,7 @@
 		DBA8507C293DE3D6001A3B6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA8507B293DE3D6001A3B6D /* Preview Assets.xcassets */; };
 		DBA85083293DE438001A3B6D /* test.xml in Resources */ = {isa = PBXBuildFile; fileRef = DBA85082293DE438001A3B6D /* test.xml */; };
 		DBA85085293DE682001A3B6D /* SunParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA85084293DE682001A3B6D /* SunParser.swift */; };
+		DBA85088293E4A88001A3B6D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBA85086293E4A88001A3B6D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DBA8507B293DE3D6001A3B6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBA85082293DE438001A3B6D /* test.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test.xml; sourceTree = "<group>"; };
 		DBA85084293DE682001A3B6D /* SunParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunParser.swift; sourceTree = "<group>"; };
+		DBA85087293E4A88001A3B6D /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		DBA85072293DE3D4001A3B6D /* XmlParse */ = {
 			isa = PBXGroup;
 			children = (
+				DBA85086293E4A88001A3B6D /* Localizable.strings */,
 				DBA85073293DE3D4001A3B6D /* XmlParseApp.swift */,
 				DBA85075293DE3D4001A3B6D /* ContentView.swift */,
 				DBA85077293DE3D6001A3B6D /* Assets.xcassets */,
@@ -117,6 +120,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nb,
 			);
 			mainGroup = DBA85067293DE3D4001A3B6D;
 			productRefGroup = DBA85071293DE3D4001A3B6D /* Products */;
@@ -134,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA85083293DE438001A3B6D /* test.xml in Resources */,
+				DBA85088293E4A88001A3B6D /* Localizable.strings in Resources */,
 				DBA8507C293DE3D6001A3B6D /* Preview Assets.xcassets in Resources */,
 				DBA85078293DE3D6001A3B6D /* Assets.xcassets in Resources */,
 			);
@@ -153,6 +158,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DBA85086293E4A88001A3B6D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBA85087293E4A88001A3B6D /* nb */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DBA8507D293DE3D6001A3B6D /* Debug */ = {

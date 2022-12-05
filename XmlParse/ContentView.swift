@@ -25,10 +25,10 @@ struct ContentView: View {
     var body: some View {
         VStack (alignment: .center, spacing: 0) {
             List(sunRises) { sunRise in
-                Text("Sunrise : \(sunRise.time)")
+                Text(String(localized: "Sunrise: \(sunRise.time)"))
             }
             List(sunSets) { sunSet in
-                Text("Sunset: \(sunSet.time)")
+                Text(String(localized: "Sunset: \(sunSet.time)"))
             }
         }
         .task {
